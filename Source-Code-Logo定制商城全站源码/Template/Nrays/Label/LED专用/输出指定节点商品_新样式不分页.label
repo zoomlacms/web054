@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>337</LabelID>
+    <LabelName>输出指定节点商品_新样式不分页</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>LED专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,4,1,显示数</LabelParam>
+    <LabelTable>ZL_Commodities LEFT JOIN ZL_P_Shop ON ZL_Commodities.ItemID=ZL_P_Shop.ID</LabelTable>
+    <LabelField>Proname,ShiPrice,LinPrice,Thumbnails,NodeID,ZL_Commodities.ID</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID or NodeID in (select NodeID from zl_Node where ParentID=@NodeID)) And istrue=1 And Sales=1 And Recycler=0</LabelWhere>
+    <LabelOrder>AddTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;
+&lt;div class="neon_list"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;
+  
+  &lt;div class="neon_list_Pic" style="line-height:200px;"&gt;
+  &lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" style="max-width:100%;max-height:100%;"/&gt;
+  &lt;/div&gt;
+  
+&lt;/a&gt;
+&lt;p&gt;{Field="Proname"/}&lt;/p&gt;
+&lt;div class="neon_price"&gt;
+&lt;s&gt;${ZL:GetMoney({Field="ShiPrice"/},2,1)/}&lt;/s&gt;&lt;br&gt;
+&lt;span&gt;Our Price: ${ZL:GetMoney({Field="LinPrice"/},2,1)/}&lt;/span&gt;
+&lt;/div&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}" class="btn btn-warning"&gt;Buy Now&lt;/a&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Commodities","tb_s":"ZL_P_Shop"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

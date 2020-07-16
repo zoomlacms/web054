@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="createimg.aspx.cs" Inherits="ZoomLaCMS.LOGO.createimg" EnableViewState="false"%>

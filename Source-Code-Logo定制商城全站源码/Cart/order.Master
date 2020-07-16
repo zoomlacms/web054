@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="order.master.cs" Inherits="ZoomLaCMS.Cart.order" ClientIDMode="Static" %><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/dist/css/bootstrap4.min.css" rel="stylesheet"/>
+<link href="/dist/css/zico.min.css" rel="stylesheet"/>
+<link href="/dist/css/font-awesome.min.css" rel="stylesheet"/>
+<script src="/JS/jquery.min.js" ></script>
+<script src="/dist/js/popper.min.js"></script>
+<script src="/dist/js/bootstrap4.min.js"></script>
+<link rel="stylesheet" href="dist/css/swiper.min.css" />
+<script src="/JS/ICMS/ZL_Common.js"></script>
+<script src="/JS/ZL_Regex.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<link type="text/css" rel="stylesheet" href="/TempLate/Nrays/style/global.css" />
+<style type="text/css">
+.minwidth{max-width:800px;width:100%;}
+.home17_mobilemenu{display:none}
+@media (max-width:768px) {.modal-dialog{margin-left:0px;margin-right:0px;}}
+</style>
+<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="cart_body">
+<asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+</div>
+<asp:ContentPlaceHolder runat="server" ID="ScriptContent"></asp:ContentPlaceHolder>
+</form>
+</body>
+</html>  

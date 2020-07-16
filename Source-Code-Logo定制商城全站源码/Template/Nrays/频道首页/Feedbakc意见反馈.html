@@ -1,0 +1,204 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Feedback_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<link rel="stylesheet" href="/dist/css/weui.min.css" />
+<link href="/Plugins/Third/alert/sweetalert.css" rel="stylesheet" />
+<script src="/Plugins/Third/alert/sweetalert.min.js?v=1"></script>
+<style>
+.weui-label { font-weight:400; margin-bottom:0; width:200px;}
+</style>
+</head> 
+<body class="bac">
+{ZL.Label id="全站头部"/}
+<div class="container">
+<div class="home_list_l hidden-xs">
+<ul>
+{ZL.Label id="输出商城下节点" NodeID="2" /}
+<li class="more"><a href="{ZL:GetNodeLinkUrl(2)/}">More +</a></li>
+</ul>
+</div>
+<div class="home_list_r">
+<div class="mySites padding10_lr">
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+{ZL.Label id="输出多级节点导航_V4" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="30" /}
+<li class="breadcrumb-item active">Feedback</li>
+</ul>
+</div>
+<div class="feed_sub padding10_lr">
+<div class="weui-cells__title">* Required information</div>
+<div class="weui-cells weui-cells_form">
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label"><span style="color:#f00;">*</span> Name</label></div>
+<div class="weui-cell__bd"><input type="text" class="weui-input" placeholder="Plase Input Your Name" id="Name" /></div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label"><span style="color:#f00;">*</span> Email</label></div>
+<div class="weui-cell__bd"><input type="text" class="weui-input" placeholder="Plase Input Your Email" id="Email" /></div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">Customer Service</label></div>
+<div class="weui-cell__bd">
+<select class="weui-select" name="khfw" id="khfw">
+<option value="0" selected="selected">Customer Service..  (5 is Best)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">Quality of Sign</label></div>
+<div class="weui-cell__bd">
+<select class="weui-select" name="bzpz" id="bzpz">
+<option value="0" selected="selected">Quality of Neon Sign..  (5 is Best)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">Speed of delivery</label></div>
+<div class="weui-cell__bd">
+<select class="weui-select" name="jhsd" id="jhsd">
+<option value="0" selected="selected">Speed of delivery..  (5 is Best)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__hd"><label class="weui-label">Over all Experience</label></div>
+<div class="weui-cell__bd">
+<select class="weui-select" name="ztty" id="ztty">
+<option value="0" selected="selected">Over all Experience..  (5 is Best)</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</div>
+</div>
+
+<div class="weui-cell">
+<div class="weui-cell__bd"><textarea class="weui-textarea" placeholder="Comments/Suggestion on improving the website" id="Opinion" rows="3"></textarea></div>
+</div>
+</div>
+<div class="weui-btn-area">
+<a class="weui-btn weui-btn_primary" onClick="feedSub();">Submit</a>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//手机下右侧导航菜单效果
+$(function () {
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_nav_search").show();
+    $(".home_nav_r").hide();
+    $(".home_nav_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_nav_search").hide();
+    $(".home_nav_r").show();
+}
+
+function feedSub(){
+    var Name = $("#Name").val();
+    var Email = $("#Email").val();
+    var khfw = $("#khfw").val();
+    var bzpz = $("#bzpz").val();
+    var jhsd = $("#jhsd").val();
+    var ztty = $("#ztty").val();
+    var Opinion = $("#Opinion").val(); 
+    var reg = /\w+[@]{1}\w+[.]\w+/;
+    if(Name=="" || Name==null || Email=="" || Email==null || !reg.test(Email)){
+        swal({
+          title: "Fail",
+          text: "Email Or Name empty or format error",
+          type: "error",
+          showCancelButton: false,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Ok",
+          closeOnConfirm: false
+        });
+    }else{
+        var pubjson = {
+            PubTitle:Email,
+            Name:Name,
+            Email:Email,
+            khfw:khfw,
+            bzpz:bzpz,
+            jhsd:jhsd,
+            ztty:ztty,
+            PubContent:Opinion
+        }
+        $.post("/API/Mod/Pub.ashx?action=add&pubid=8&id=51",{data:JSON.stringify(pubjson)},function(data){
+            swal({
+              title: "Success",
+              text: "Submit successfully!",
+              type: "success",
+              showCancelButton: false,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "Ok",
+              closeOnConfirm: false
+            },
+            function(){
+              window.location.href="/Class_3/NodePage.aspx";
+            });
+        });
+    }
+}
+</script>

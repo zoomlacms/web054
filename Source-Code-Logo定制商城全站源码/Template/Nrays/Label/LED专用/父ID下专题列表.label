@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>346</LabelID>
+    <LabelName>父ID下专题列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>LED专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>Pid,0,1,父专题ID|Order,asc$desc,3,排序方法|ShowNum,10,1,调用信息数|ClassName,col-12 col-md-2,1,CSS样式定义</LabelParam>
+    <LabelTable>ZL_Special</LabelTable>
+    <LabelField>SpecID,SpecName</LabelField>
+    <LabelWhere> ZL_Special.Pid=@Pid</LabelWhere>
+    <LabelOrder>ZL_Special.SpecID @Order</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li class="@ClassName"&gt;&lt;a href="{ZL:GetSpecialPage({Field="SpecID"/})/}"&gt;{Field="SpecName"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Special","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

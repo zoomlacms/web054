@@ -1,0 +1,154 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>322</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>		
+&lt;div class="foot_video"&gt;
+&lt;video style="width: 100%;" preload="auto" autoplay="" loop="" muted=""&gt;
+&lt;source src="{$CssDir/}mp4/home.mp4"&gt;
+&lt;/video&gt;
+	&lt;div class="container-fluid"&gt;
+		&lt;div class="container"&gt;
+&lt;div class=""&gt;
+    &lt;ul class="nav nav-tabs" id="myTab" role="tablist"&gt;
+      &lt;li class="nav-item"&gt; &lt;a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"&gt;Customize &lt;/a&gt; &lt;/li&gt;
+      &lt;li class="nav-item"&gt; &lt;a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"&gt;Search&lt;/a&gt; &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="tab-content" id="myTabContent"&gt;
+      &lt;div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab"&gt;
+        &lt;a class="btn btn-light" href="{ZL:GetNodeLinkUrl(3)/}"&gt;&lt;i class="fa fa-pencil"&gt;&lt;/i&gt; Need to customize your sign? Please send us your request.&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"&gt;
+        
+&lt;div class="wapper"&gt;
+      &lt;form class="form-inline my-2 my-lg-0" role="search" action="/Search/SearchList"&gt;
+	  &lt;input type="hidden" name="s" value="1"&gt;
+				&lt;input type="text"  name="keyword" placeholder="Search our products."/&gt;
+				&lt;div class="btn"&gt;&lt;i class="fa fa-search" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+       &lt;/form&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;Hot:&amp;nbsp;&amp;nbsp;&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=sign"&gt;Sign&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=led"&gt;led&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=neon"&gt;Neon&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Stamp"&gt;Stamp&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Party"&gt;Party&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=mickey"&gt;Mickey&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=orange"&gt;Orange sign&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=hair"&gt;Hair cut&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/div&gt;
+			
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;		
+
+&lt;div class="sec04"&gt;
+  &lt;div class="container"&gt;
+		&lt;ul class="row"&gt;
+			&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;ABOUT&lt;/dt&gt;
+&lt;!--					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(5)/}"&gt;Company&lt;/a&gt;&lt;/dd&gt;--&gt;
+&lt;!--					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(7)/}"&gt;Teams&lt;/a&gt;&lt;/dd&gt;--&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(23)/}"&gt;Company&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(22)/}"&gt;Why buy from us&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(4)/}"&gt;Privacy Policy&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(5)/}"&gt;Warranty &amp; Shipping Policies&lt;/a&gt;&lt;/dd&gt;					
+&lt;!--					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(6)/}"&gt;Return &amp; Refund policy&lt;/a&gt;&lt;/dd&gt;--&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(8)/}"&gt;Contact&lt;/a&gt;&lt;/dd&gt;
+                  &lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(18)/}" class="text-danger"&gt;$$ TAX SEASON special! 5% off all tax signs!&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;Custom Signs&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(7)/}"&gt;Custom Neon Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(8)/}"&gt;Custom LED Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;Custom Your LOGO Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(10)/}"&gt;Custom NEON Signs Request Form&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(11)/}"&gt;Custom LED Signs Request Form&lt;/a&gt;&lt;/dd&gt;
+					&lt;dt&gt;SIGN BY TYPE&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(105)/}"&gt;LED Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(106)/}"&gt;LED Strip Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(113)/}"&gt;Others&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;Sign By Category&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(60)/}"&gt;Neon Bar Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(61)/}"&gt;Pizza &amp; Pizza Slice&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Coffee"&gt;Coffee &amp; Cafe&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=ice"&gt;Ice Cream &amp; Yogurt&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Restaurant"&gt;Restaurant Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Massage"&gt;Massage Therapy&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Facial"&gt;Facial &amp; Waxing&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tattoo"&gt;Tattoo &amp; Piercing&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Hair"&gt;Hair &amp; Barber Shops&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Beauty"&gt;Beauty Salon Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=atm"&gt;ATM Signs&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tax"&gt;Tax Service Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Loans"&gt;Loans &amp; Mortgage Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Medical"&gt;Medical &amp; Dentist&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Automotive"&gt;Automotive Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tailor"&gt;Tailor &amp; Alteration&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Cleaners"&gt;Cleaners &amp; Laundry&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Animals"&gt;Animals &amp; Pets&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Restroom"&gt;Restroom Signs&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+			&lt;li class="col-xl col-lg col-md-12 col-sm-12 col-12 youxiang_box"&gt;
+				&lt;div class="youxiang"&gt;&lt;a href="mailto:sales@raysandsigns.com"&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan="2"&gt;&lt;i class="fa fa-envelope max" aria-hidden="true"&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;Subscirbe to our&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NEWSLETTER &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/a&gt;&lt;/div&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pinterest-p" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-youtube-play" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div class="copy"&gt;
+	  		&lt;ul&gt;
+	  		&lt;li&gt;{$Copyright/}&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon5.png" alt="paypal" /&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon2.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon3.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon4.jpg" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+	  		&lt;/ul&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

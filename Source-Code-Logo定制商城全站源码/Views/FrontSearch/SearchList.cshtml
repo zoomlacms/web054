@@ -1,0 +1,167 @@
+﻿@using System.Data
+@using ZoomLa.SQLDAL
+@model System.Data.DataTable
+@{
+    int NodeID = DataConvert.CLng(Request.QueryString["node"]);
+    int Order = DataConvert.CLng(Request.QueryString["order"]);
+    int S = DataConvert.CLng(Request.QueryString["S"]);
+    string KeyWord = HttpUtility.UrlDecode(Request.QueryString["KeyWord"] ?? "");
+    Layout = "~/Views/Shared/_empty.cshtml";
+    DataTable dt = SqlHelper.ExecuteTable("select Top 10 * from ZL_CommonModel where (NodeID=1 or FirstNodeID=1) And Status=99 Order by Hits DESC");
+    DataTable dt1 = SqlHelper.ExecuteTable("select Top 10 * from ZL_User Order by LastActiveTime DESC");
+}
+@section head{
+<title>Search Product</title>
+<link href="/App_Themes/V3.css" rel="stylesheet" />
+<link href="/Template/Nrays/style/global.css?Version=20170501506670" rel="stylesheet"/>
+<style>
+body { background:#f0f0f0;}
+.dropdown { display:inline-block;}
+.navbar-brand{display: block;padding-top:0;height: 2rem;}
+.logo{margin-top:-0.8rem;}
+.searchlist li{float: left;}
+/*180528*/
+.searchlist li p span{margin-right:0px;}
+.search_pro_t a{height:auto;}
+.search_pro_t a img{border:none;}
+
+.pagination { display: inline-block; padding-left: 0; margin: 20px 0; border-radius: 4px; }
+.pagination>li { display: inline;border-bottom:none; }
+.pagination>li:first-child>a, .pagination>li:first-child>span { margin-left: 0; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+.pagination>li>a, .pagination>li>span { position: relative; float: left; padding: 6px 12px; margin-left: -1px; line-height: 1.42857143; color: #337ab7; text-decoration: none; background-color: #fff; border: 1px solid #ddd; }
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover { z-index: 3; color: #fff; cursor: default; background-color: #337ab7; border-color: #337ab7; }
+.search_left_t .input-group-addon{padding-top: 0.6rem;}
+</style>
+}
+@section content{
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"模板设计全站头部\" /}"))
+<div class="disgin_banner">
+<h1>Search for the product you want.</h1>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="search_left">
+<div class="search_left_t">
+<div class="input-group">
+<span class="input-group-addon">Fast Search</span>
+<input type="text" id="TxtKeyword" class="form-control" placeholder="Keyword" value="@ViewBag.KeyWord" />
+</div>
+<button type="button" value="Searcj" onclick="UpdateSkey();" class="btn btn-default"><i class="fa fa-search"></i></button>
+</div>
+<div class="search_left_c">
+<div role="tabpanel">
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist" hidden >
+<li role="presentation" class="active" onclick="UpdateS(0);"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">内容</a></li>
+<li role="presentation" onclick="UpdateS(1);"><a href="#home" aria-controls="profile" role="tab" data-toggle="tab">商品</a></li>
+<li role="presentation" onclick="UpdateS(2);"><a href="#home" aria-controls="messages" role="tab" data-toggle="tab">论坛</a></li>
+<li role="presentation" onclick="UpdateS(3);"><a href="#home" aria-controls="settings" role="tab" data-toggle="tab">问答</a></li>
+<li role="presentation" onclick="UpdateS(4);"><a href="#home" aria-controls="settings" role="tab" data-toggle="tab">留言</a></li>
+<li role="presentation" onclick="UpdateS(5);"><a href="#home" aria-controls="settings" role="tab" data-toggle="tab">店铺</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home">
+<div class="search_orderby" hidden>
+<select id="ddlnode" name="ddlnode" class="form-control pull-left" onchange="UpdateNode()">
+<option value="0">All node</option>
+@MvcHtmlString.Create(ViewBag.nodehtml)
+</select>
+<div class="pull-right" hidden>
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+<span id="node_dr">按栏目检索</span>
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li><a class="skey" data-type="node" data-val="0" href="javascript:;">所有栏目</a></li>
+@foreach(DataRow dr in Model.Rows)
+{
+<li><a class="skey" data-type="node" data-val="@dr["nodeid"]" href="javascript:;">@dr["NodeName"]</a></li>
+}
+</ul>
+</div>
+<div class="dropdown">
+<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+<span id="order_dr">按时间</span><span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a class="skey" role="menuitem" tabindex="-1" data-type="order" data-val="0" href="javascript:;">按时间</a></li>
+<li role="presentation"><a class="skey" role="menuitem" tabindex="-1" data-type="order" data-val="1" href="javascript:;">点击数</a></li>
+</ul>
+<a href="/Search/Default" class="btn btn-default margin_l5">进入搜索中心>></a>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div id="rpt_div" class="margin_t10"></div>
+</div>
+<div role="tabpanel" class="tab-pane" id="profile">...</div>
+<div role="tabpanel" class="tab-pane" id="messages">...</div>
+<div role="tabpanel" class="tab-pane" id="settings">...</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div style="height:56px;"></div>
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"模板设计全站底部\" /}"))
+}
+@section script{
+    <script>
+        var skeyMod = { keywrod: "@KeyWord", node: "@NodeID", order: "@Order",s:"@S" },
+            waitdiv = '<div id="wait_div" style="position:fixed; left:0; right:0; top:0; bottom:0; background:rgba(0, 0, 0, 0.31); z-index:2000;"><i class="fa fa-spinner fa-spin" style="position:absolute; top:50%; left:50%; -webkit-transform:translate(-50%,-50%); transform:translate(-50%,-50%);  font-size: 40px;"></i></div>';
+        function LoadPage() {
+            $("#rpt_div").html(waitdiv);
+            var url = "SearchBody?keyword=" + encodeURI(skeyMod.keywrod) + "&node=" + skeyMod.node + "&order=" + skeyMod.order + "&s="+skeyMod.s+" #main";
+            $("#rpt_div").load(url);
+        }
+        function LoadByAjax(query, page) {
+            $("#rpt_div").html(waitdiv);
+            var url = "SearchBody" + query + "page=" + page;
+            $("#rpt_div").load(url + " #main");
+        }
+        function UpdateNode() {
+            skeyMod.node = $("[name='ddlnode'] option:checked").val();
+            LoadPage();
+        }
+        function UpdateSkey() {
+            skeyMod.keywrod = $("#TxtKeyword").val();
+            LoadPage();
+        }
+        function UpdateS(s)
+        {
+            skeyMod.s = s;
+            LoadPage();
+        }
+        $(function () {
+            $(".skey").click(function () {
+                var obj = $(this);
+                switch (obj.data("type")) {
+                    case "node":
+                        skeyMod.node = obj.data("val");
+                        $("#node_dr").text(obj.text());
+                        break;
+                    case "order":
+                        skeyMod.order = obj.data("val");
+                        $("#order_dr").text(obj.text());
+                        break;
+                }
+                LoadPage();
+            });
+            $("#TxtKeyword").keydown(function () {
+                if (event.keyCode == 13) { UpdateSkey(); return false; }
+            });
+            LoadPage();
+            if (skeyMod.node > 0) {
+                $("#ddlnode").val(skeyMod.node);
+            }
+        })
+    </script>
+}

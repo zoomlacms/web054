@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>320</LabelID>
+    <LabelName>首页商城商品列表_不分页</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>交易平台专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,20,1,每页显示数|tit1,,1,标题|tit2,,1,标题2|tit3,,1,标题3</LabelParam>
+    <LabelTable>ZL_Commodities</LabelTable>
+    <LabelField>ID,LinPrice,Proname,Thumbnails</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID)  and Sales=1 And istrue=1 And Recycler=0 And Proname like '%@tit1%' And Proname  like '%@tit2%' And Proname like '%@tit3%'</LabelWhere>
+    <LabelOrder>Addtime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10"&gt;
+&lt;div class="home_list_c_list"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;
+&lt;div class="cname"&gt;{Field="Proname"/}&lt;/div&gt;
+&lt;div class="cimg"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" /&gt;&lt;/div&gt;
+&lt;div class="cbuy"&gt;&lt;img src="{$CssDir/}images/buy.png" alt="{$SiteName/}" /&gt;&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Commodities","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

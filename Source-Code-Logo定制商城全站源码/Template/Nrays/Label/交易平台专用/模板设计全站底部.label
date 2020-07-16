@@ -1,0 +1,108 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>343</LabelID>
+    <LabelName>模板设计全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>交易平台专用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>
+&lt;div class="sec04"&gt;
+  &lt;div class="container"&gt;
+		&lt;ul class="row"&gt;
+			&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;ABOUT&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(5)/}"&gt;Company&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(7)/}"&gt;Teams&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(23)/}"&gt;History&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(4)/}"&gt;Privacy Policy&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(5)/}"&gt;Warranty &amp; Shipping Policies&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(6)/}"&gt;Return &amp; Refund policy&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetInfoUrl(8)/}"&gt;Contact&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;CUSTOM SIGNS&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(7)/}"&gt;CUSTOM NEON SIGNS&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(8)/}"&gt;CUSTOM LED SIGNS&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;CUSTOM YOUR LOGO SIGNS&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(10)/}"&gt;CUSTOM NEON SIGNS REQUEST FORM&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(11)/}"&gt;CUSOTM LED SIGNS REQUEST FORM&lt;/a&gt;&lt;/dd&gt;
+					&lt;dt&gt;SIGN BY TYPE&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(105)/}"&gt;LED SIGNS&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(106)/}"&gt;LED STRIP SIGNS&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(113)/}"&gt;Others&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;Sign By Category&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(60)/}"&gt;Neon Bar Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="{ZL:GetNodeLinkUrl(61)/}"&gt;Pizza &amp; Pizza Slice&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Coffee"&gt;Coffee &amp; Cafe&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=ice"&gt;Ice Cream &amp; Yogurt&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Restaurant"&gt;Restaurant Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Massage"&gt;Massage Therapy&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Facial"&gt;Facial &amp; Waxing&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tattoo"&gt;Tattoo &amp; Piercing&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Hair"&gt;Hair &amp; Barber Shops&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Beauty"&gt;Beauty Salon Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=atm"&gt;ATM Signs&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+				&lt;li class="col-xl col-lg col-md-6 col-sm-6 col-6"&gt;
+				&lt;dl&gt;
+					&lt;dt&gt;&lt;/dt&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tax"&gt;Tax Service Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Loans"&gt;Loans &amp; Mortgage Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Medical"&gt;Medical &amp; Dentist&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Automotive"&gt;Automotive Signs&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Tailor"&gt;Tailor &amp; Alteration&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Cleaners"&gt;Cleaners &amp; Laundry&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Animals"&gt;Animals &amp; Pets&lt;/a&gt;&lt;/dd&gt;
+					&lt;dd&gt;&lt;a href="/Search/SearchList?s=1&amp;keyword=Restroom"&gt;Restroom Signs&lt;/a&gt;&lt;/dd&gt;
+				&lt;/dl&gt;
+				&lt;/dl&gt;
+			&lt;/li&gt;
+			&lt;li class="col-xl col-lg col-md-12 col-sm-12 col-12 youxiang_box"&gt;
+				&lt;div class="youxiang"&gt;&lt;a href="mailto:sales@raysandsigns.com"&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td rowspan="2"&gt;&lt;i class="fa fa-envelope max" aria-hidden="true"&gt;&lt;/i&gt;&lt;/td&gt;&lt;td&gt;Subscirbe to our&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NEWSLETTER &lt;i class="fa fa-angle-double-right" aria-hidden="true"&gt;&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/a&gt;&lt;/div&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-pinterest-p" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-youtube-play" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;div class="copy"&gt;
+	  		&lt;ul&gt;
+	  		&lt;li&gt;{$Copyright/}&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon2.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon3.png" alt=""&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;img src="{$CssDir/}images/index_icon4.jpg" alt=""&gt;&lt;/a&gt;&lt;/li&gt;
+	  		&lt;/ul&gt;
+	  &lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

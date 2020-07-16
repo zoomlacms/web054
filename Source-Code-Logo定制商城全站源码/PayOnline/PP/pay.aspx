@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="pay.aspx.cs" Inherits="ZoomLaCMS.PayOnline.PP.pay" %>

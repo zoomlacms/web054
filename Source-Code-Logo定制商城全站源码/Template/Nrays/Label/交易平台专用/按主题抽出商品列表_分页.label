@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>332</LabelID>
+    <LabelName>按主题抽出商品列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>交易平台专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,20,1,每页显示数|zt,20,1,主题</LabelParam>
+    <LabelTable>ZL_Commodities LEFT JOIN ZL_P_Shop ON ZL_Commodities.ItemID=ZL_P_Shop.ID</LabelTable>
+    <LabelField>ZL_Commodities.ID,LinPrice,Proname,Thumbnails</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID)  and Sales=1 And istrue=1 And Recycler=0 And zt='@zt'</LabelWhere>
+    <LabelOrder>Addtime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+
+
+&lt;div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 padding10"&gt;
+&lt;div class="home_list_c_list"&gt;
+&lt;a href="{ZL:GetShopUrl({Field="ID"/})/}"&gt;
+&lt;div class="cname"&gt;{Field="Proname"/}&lt;/div&gt;
+&lt;div class="cimg"&gt;&lt;img src="{ZL:GetPicUrl({Field="Thumbnails"/})/}" /&gt;&lt;/div&gt;
+&lt;div class="cbuy"&gt;&lt;img src="{$CssDir/}images/buy.png" alt="{$SiteName/}" /&gt;&lt;/div&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+{/Repeate}
+
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+{ZL.Page id="自定义分页"/}
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Commodities","tb_s":"ZL_P_Shop"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

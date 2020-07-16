@@ -1,0 +1,480 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Submit_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<link rel="stylesheet" href="/dist/css/weui.min.css" />
+<link href="/Plugins/Third/alert/sweetalert.css" rel="stylesheet" />
+<script src="/Plugins/Third/alert/sweetalert.min.js?v=1"></script>
+<script src="/JS/jquery.validate.min.js?v=1"></script>
+<style>
+.weui-label { font-weight:400; margin-bottom:0; width:200px;}
+.m715-50 { width:50%; max-width:715px; display:inline;}
+.pr20rem{padding-right: 20rem;}
+.pr9rem{padding-right: 9rem;}
+.selectAb{ width: 900px; height: 200px; 
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='rgb(0, 0, 0)',endColorStr='rgb(255, 253, 255)',gradientType='180'); 
+background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(rgb(0, 0, 0)), to(rgb(255, 253, 255))); 
+/*
+background: linear-gradient(left , rgb(255, 241, 0) , rgb(255, 253, 255) 100%);
+background: -webkit-linear-gradient(left , rgb(255, 241, 0) , rgb(255, 253, 255) 100%);
+*/
+}
+
+.error{color:#ff0000;font-size:12px;}
+</style>
+</head> 
+<body class="comp">
+{ZL.Label id="全站头部"/}
+
+<div class="fdbanner">
+<h2>Submit you design and buy!</h2>
+</div>
+
+<div class="container">
+
+<div class="home_list_r">
+<div class="mySites padding10_lr margin0">
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+{ZL.Label id="输出多级节点导航_V4" NodeID="{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}" ShowNum="30" /}
+<li class="breadcrumb-item active">Submit</li>
+</ul>
+</div>
+
+<div class="custorm_request">
+<h2>Custom Neon & LED Signs Request Form</h2>
+<div class="custorm_request_pic">
+<img src="{$CssDir/}images/form-banner.gif" alt="form-banner">
+<a href="{ZL:GetNodeLinkUrl(108)/}"><strong>Click to see real photos of customs signs</strong></a>
+<h3><strong>Receive Free quote in 24 hours.</strong></h3>
+<p>
+Please use the design request form below to help us provide you with an amazing custom sign that fits your needs exactly. We can do either NEON or LED and we also have 100's of custom templates to choose from on our site. Fill out as much of the form as you like and remember the more information we have from you the more our design will look like exactly what you are looking for.
+</p>
+</div>
+<form method="post" id="form1">
+<div class="customForm">
+<div class="customForm_t"><strong> Custom Sign Request Form</strong></div>
+<div class="subform">
+<div class="col-md-4">
+<div class="form-group">
+<label for=""><span class="mandt">*</span>Name</label>
+<input id="Name" type="text" name="name" class="form-control required">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for=""><span class="mandt">*</span>Email</label>
+<input id="Email" type="text" name="email" class="form-control required email">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for=""><span class="mandt">*</span>Phone Number</label>
+<input id="phone" type="text" name="phone" class="form-control required usphone" maxlength="10">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="">Sign Type </label>
+<select name="signType" id="signType" class="form-control">
+<option value="">Please Select</option>
+<!--<option value="Neon">Neon</option>-->
+<option value="LED">LED</option>
+<option value="LED STRIP">LED STRIP</option>
+</select>
+</div>
+</div>
+<div class="col-md-8">
+<div class="form-group">
+<label for="">Sign Size:</label>
+<select name="signSize" id="signSize" class="form-control">
+<option value="">Please select</option>
+<option value="Custom Size">Custom Size</option>
+<option value='10" x 24"'>10" x 24"</option>
+<option value='11" x 27"'>11" x 27"</option>
+<option value='17" x 30"'>17" x 30"</option>
+<option value='17" x 32"'>17" x 32"</option>
+<option value='13" x 32"'>13" x 32"</option>
+<option value='24" x 24"'>24" x 24"</option>
+<option value='26" x 26"'>26" x 26"</option>
+<option value='24" x 31"'>24" x 31"</option>
+<option value='20" x 37"'>20" x 37"</option>
+<option value='36" x 60"'>36" x 60"</option>
+<option value="Suggest me size">Suggest me size</option>
+</select>
+</div>
+</div>
+<div class="col-md-8">
+<div class="form-group">
+<div class="customForm_t2">What would you like your sign to say?</div>
+<textarea name="signText" id="signText" class="form-control" rows="5" cols="20"></textarea>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<div class="customForm_t2 choose_color">Please select the colors:</div>
+<div class="clorlist table-responsive">
+<table border="0" cellspacing="0" cellpadding="3">
+<tbody>
+<tr class="selectAb_td">
+<td class="text-center">Red</td>
+<td class="text-center">Orange</td>
+<td class="text-center">Yellow</td>
+<td class="text-center">Green</td>
+<td class="text-center">Turquoise</td>
+<td class="text-center">Blue</td>
+<td class="text-center">Purple</td>
+<td class="text-center">Pink</td>
+<td class="text-center ">White</td>
+<td class="pr9rem"></td>
+</tr>
+<tr class="selectAD">
+<td class="text-center"><input name="color" type="checkbox" value="Red"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Orange"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Yellow"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Green"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Turquoise"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Blue"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Purple"></td>
+<td class="text-center"><input name="color" type="checkbox" value="Pink"></td>
+<td class="text-center"><input name="color" type="checkbox" value="White"></td>
+<td class="pr9rem"></td>
+</tr>
+<tr bgcolor="" class="selectAb">
+<td class="text-center"><img src="{$CssDir/}Images/Color_Red.png" alt="redColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Orange.png" alt="orangeColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Yellow.png" alt="yellowColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Green.png" alt="greenColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Turquoise.png" alt="turquoiseColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Blue.png" alt="blueColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Purple.png" alt="purpleColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_Pink.png" alt="pinkColor"></td>
+<td class="text-center"><img src="{$CssDir/}images/Color_White.png" alt="whiteColor"></td>
+<td class="pr9rem"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<div class="form_list">
+<label for="">Please select font:</label>
+<div class="form-group">
+<div class="col-md-4 padding0">
+<select name="signFont" id="signFont" class="form-control">
+<option value="">Please Select</option>
+<option value="Bauhaus">Bauhaus</option>
+<option value="Balloon">Balloon</option>
+<option value="Architech">Architech</option>
+<option value="Belshaw">Belshaw</option>
+<option value="BPreplay">BPreplay</option>
+<option value="Eoroference">Eoroference</option>
+<option value="Learning">Learning Curve</option>
+<option value="Noodle Script">Noodle Script</option>
+<option value="Harlow">Harlow</option>
+<option value="Arial">Arial</option>
+<option value="Arial Narrow">Arial Narrow</option>
+<option value="Arial Rounded">Arial Rounded</option>
+<option value="LED - Ariel">LED - Ariel</option>
+<option value="LED - Script">LED - Script</option>
+</select>
+</div>
+</div>
+<div class="col-md-8"><img src="{$CssDir/}images/fonts-list-form.jpg" id="font" alt="font"></div>
+</div>
+</div>
+<div class="form_list">
+<label for="">Do you need a border?</label>
+<div class="form-group">
+<div class="col-md-4 padding0">
+<select name="signBorder" id="signBorder" class="form-control">
+<option value="">Please Select</option>
+<option value="No Border">No Border</option>
+<option value="Border">Border</option>
+<!-- <option value="Flashing Border">Flashing Border</option> -->
+</select>
+</div>
+<div class="col-md-8"><img src="{$CssDir/}images/border-yn.png" id="sborder" alt="sborder"></div>
+</div>
+</div>
+<div class="form_list">
+<label for="">Would you like your sign to flash?</label>
+<div class="form-group">
+<div class="col-md-4 padding0">
+<select name="isFlashing" id="isFlashing" class="form-control">
+<option value="">Please Select</option>
+<option value="Text Flashing">Text Flashing</option>
+<option value="Border Flashing">Border Flashing</option>
+<option value="Both Flashing">Both Flashing</option>
+<option value="No Flashing">No Flashing</option>
+</select>
+</div>
+<div class="col-md-8"><img src="{$CssDir/}images/flash-op-forms.gif" id="signflash" alt="signflash"></div>
+</div>
+</div>
+<div class="form-group">
+<div class="form_list">
+<div class="customForm_t2">Additional instructions:</div>
+<textarea name="customText" id="customText" class="form-control" rows="5" cols="20"></textarea>
+</div>
+</div>
+
+<div class="form_list">
+    <label for="">Logo/Design/Idea/Image upload here</label>
+    <div class="padcf">
+        If you have any artwork or a logo you would like us to include, please upload it here
+        <div>
+            <img id="pic_img" src="" style="width:80px;" onerror="this.src = '/UploadFiles/nopic.svg';" />
+        </div>
+    </div>
+    <input type="file" style="display:none;" id="pic_up" accept="image/jpg,image/png,image/jpeg,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" onchange="pic.upload();" />
+    <input type="text" id="PicUrl_T" class="form-control m715-50 monitor" readonly placeholder="Please upload JPG,PNG,PDF,DOCX format files"/>
+    <input type="button" class="btn btn-info" value="Upload Picture" onclick="pic.sel('PicUrl_T');" />
+</div>
+
+<div class="p-2"><a href="{ZL:GetInfoUrl(1126)/}">More Information</a></div>
+<div class="form_list" style="text-align:center;padding-top: 1rem;">
+<button type="button" class="btn btn-danger" onClick="SubForm();"> Submit Request</button>
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!-- custorm_request end! -->
+
+<div class="clearfix"></div>
+</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script src="/JS/Controls/ZL_Webup.js"></script>
+<script src="/JS/ZL_Regex.js"></script>
+<link href="/Plugins/Third/alert/sweetalert.css" rel="stylesheet" />
+<script src="/Plugins/Third/alert/sweetalert.min.js?v=1"></script>
+<script>
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","10%");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","10%");
+    $(".home_top_nav").fadeIn(1000);
+}
+	
+//右侧导航
+function ShowMobileMenu(){
+	$(".home17_mobilemenu_bg").fadeIn();;
+	$(".home17_mobilemenu").addClass("active");
+	$(".home17_mobilemenu_bg").click(function(){
+		$(".home17_mobilemenu_bg").fadeOut();
+		$(".home17_mobilemenu").removeClass("active");
+	});
+}
+function HideMobileMenu(){
+	$(".home17_mobilemenu_bg").fadeOut();
+	$(".home17_mobilemenu").removeClass("active");
+}
+
+
+//手机下右侧导航菜单效果
+$(function () {
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_nav_search").show();
+    $(".home_nav_r").hide();
+    $(".home_nav_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_nav_search").hide();
+    $(".home_nav_r").show();
+}
+
+function feedSub(){
+    var Name = $("#Name").val();
+    var Email = $("#Email").val();
+    var Number1 = $("#Number").val();
+    var khfw = $("#khfw").val();
+    var bzpz = $("#bzpz").val();
+    var jhsd = $("#jhsd").val();
+    var ztty = $("#ztty").val();
+    var Opinion = $("#Opinion").val(); 
+    var reg = /\w+[@]{1}\w+[.]\w+/;
+    if(Name=="" || Name==null ||!ZL_Regex.isEmail(Email) || Number1=="" || Number1==null){
+        swal({
+          title: "Fail",
+          text: "Email Or Name empty or format error",
+          type: "error",
+          showCancelButton: false,
+          confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Ok",
+          closeOnConfirm: false
+        });
+    }else{
+        var pubjson = {
+            PubTitle:Email,
+            Name:Name,
+            Email:Email,
+            khfw:khfw,
+            bzpz:bzpz,
+            jhsd:jhsd,
+            ztty:ztty,
+            PubContent:Opinion
+        }
+        $.post("/API/Mod/Pub.ashx?action=add&pubid=8&id=51",{data:JSON.stringify(pubjson)},function(data){
+            swal({
+              title: "Success",
+              text: "Submit successfully!",
+              type: "success",
+              showCancelButton: false,
+              confirmButtonColor: "#DD6B55",
+              confirmButtonText: "Ok",
+              closeOnConfirm: false
+            },
+            function(){
+              window.location.href="/Class_3/NodePage.aspx";
+            });
+        });
+    }
+}
+
+//------上传图片
+var pic = { id: "pic_up", txtid: null };
+pic.sel = function (id) {
+    $("#" + pic.id).val("");
+    $("#" + pic.id).click();
+    pic.txtid = id;
+}
+pic.upload = function () {
+   var fname = $("#" + pic.id).val();
+    SFileUP.AjaxUpFile(pic.id, function (data) {
+        $("#" + pic.txtid).val(data);
+        if (SFileUP.isWebImg(fname)) {
+            $("#pic_img").attr("src", data);
+        }
+        else { $("#pic_img").attr("src","/UploadFiles/nopic.svg"); }
+        $("#pic_hid").val(data);
+    });
+}
+pic.preSave = function () {
+    //var src = $("#pic_img").attr("src");
+    //$("#pic_hid").val(src);
+}
+
+$.validator.addMethod("us-zip", function (value, element) {
+    //22162||22162-1010
+    var patrn = /^\d{5}(?:-\d{4})?$/;
+    //M4Y1M7
+    var patrn2 = /[ABCEGHJKLMNPRSTVXY]\d[A-Z]\d[A-Z]\d/;
+    return this.optional(element) || patrn.test(value) || patrn2.test(value);
+}, "Please provide a valid zipcode.");
+$.validator.addMethod("usphone", function (value) {
+    if (ZL_Regex.isEmpty(value)) { return true; }
+    var patrn = /^([0-9]|[\+]|[\-]){10}$/;
+    return patrn.exec(value) ? true : false;
+    return true;
+}, "Please check your phone number.");
+var validForm = null;
+$(function () {
+    validForm = $("#form1").validate({ onkeyup: false, });
+})
+
+
+function SubForm(){
+    var pubjson = {
+        PubTitle:$("#Name").val(),
+        email:$("#Email").val(),
+        phone:$("#phone").val(),
+        fhlx:$("#signType option:selected").val(),
+        size:$("#signSize option:selected").val(),
+        bpwz:$("#signText").val(),
+        color:"",
+        font:$("#signFont option:selected").val(),
+        border:$("#signBorder option:selected").val(),
+        flash:$("#isFlashing option:selected").val(),
+        orther:$("#customText").val(),
+        pic:$("#PicUrl_T").val()
+    }
+    var obj = document.getElementsByName("color");
+    var color = "";
+    for(var i = 0;i<obj.length;i++){
+        if(obj[i].checked) color += obj[i].value + ",";
+    }
+    pubjson.color = color;
+    if (validForm.form()) {
+        $.post("/API/Mod/Pub.ashx?action=add&pubid=9&id=52", { data: JSON.stringify(pubjson) }, function (data) {
+            if (JSON.parse(data).retmsg == "" || JSON.parse(data).retmsg == null) {
+                swal({
+                    title: "Success",
+                    text: "Request submitted. We are working on it and will contact you shortly.",
+                    type: "success",
+                    showCancelButton: false,
+                    confirmButtonColor: "#86cceb",
+                    confirmButtonText: "OK",
+                    closeOnConfirm: false
+                },
+                function () {
+                    window.location.href = window.location.href;
+                });
+            }
+        });
+    } else {
+        $(".error").focus();
+    }
+
+
+    //if(pubjson.PubTitle=="" || pubjson.PubTitle==null){
+    //    $("#Name").focus();
+    //    sweetAlert("Fail", "Please fill in the name","error");
+    //}else if(!ZL_Regex.isEmail(pubjson.email)){
+    //    $("#Email").focus();
+    //    sweetAlert("Fail", "Please fill in the Email","error");
+    //}
+    //else if (!isMobile(pubjson.phone)) {
+    //    $("#phone").focus();
+    //    sweetAlert("Fail", "Please fill in the phone","error");
+    //}
+    //else { 
+    //}
+}
+</script>

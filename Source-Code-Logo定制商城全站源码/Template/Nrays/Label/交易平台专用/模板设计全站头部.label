@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>326</LabelID>
+    <LabelName>模板设计全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>交易平台专用</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home17_mobilemenu_bg" style="display: none;"&gt;&lt;/div&gt;
+&lt;div class="home17_mobilemenu"&gt;
+&lt;div class="home17_mobilemenu_close"&gt;&lt;a href="javascript:;" onclick="HideMobileMenu();"&gt;&lt;i class="fa z01-icon107"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="home17_mobilemenu_c"&gt;
+&lt;ul&gt;
+{ZL.Label id="输出商城下节点" NodeID="2" /}
+&lt;li class="more"&gt;&lt;a href="{ZL:GetNodeLinkUrl(2)/}"&gt;More +&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;   
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--right_nav end--&gt;
+
+&lt;div class="home_nav"&gt;
+&lt;nav class="navbar navbar-expand-lg navbar-light iNav"&gt;
+&lt;div class="container"&gt;
+&lt;a class="navbar-brand" href="/"&gt;&lt;img src="{$LogoUrl/}" class="logo" alt="{$SiteName/}"&gt;&lt;/a&gt;&lt;a href="/Cart/Cart.aspx?ProClass=1" class="home_cart_icon"&gt;&lt;img src="{$CssDir/}Images/cart.png" alt="shopping cart"&gt;&lt;/a&gt;  &lt;a href="mailto:sales@raysandsigns.com" class="home_email"&gt;&lt;i class="fa fa-envelope-o" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt; &lt;a class="home_Catalogue" href="javascript:;" onclick="ShowMobileMenu();"&gt;Custom&lt;/a&gt;
+&lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+&lt;ul class="navbar-nav mr-auto home_top_nav"&gt;
+&lt;li class="nav-item active"&gt;&lt;a class="nav-link active" href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/plugins/third/logo/list.aspx?page=1"&gt;Custom Signs&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(2)/}"&gt;Stock Signs&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(5)/}"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;!--&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetInfoUrl(8)/}"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;--&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetInfoUrl(10)/}"&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(108)/}"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item hoem_nav_email"&gt;&lt;a class="nav-link" href="mailto:sales@raysandsigns.com"&gt;&lt;i class="fa fa-envelope-o" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li class="nav-item hoem_nav_menu"&gt;&lt;a class="nav-link" href="javascript:;" onclick="ShowMobileMenu();"&gt;&lt;i class="zi zi_menu"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="nav-item home_nav_cart"&gt;&lt;a class="nav-link" href="/Cart/Cart.aspx?ProClass=1"&gt;&lt;i class="fa fa-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/nav&gt;
+&lt;/div&gt;
+&lt;!-- home_nav end! --&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

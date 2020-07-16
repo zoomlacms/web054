@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot4()/}
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>
+</head>
+<body>
+<div class="home17_mobilemenu_bg" style="display: none;"></div>
+<div class="home17_mobilemenu">
+<div class="home17_mobilemenu_close"><a href="javascript:;" onclick="HideMobileMenu();"><i class="zi zi_times"></i></a></div>
+<div class="home17_mobilemenu_c">
+<ul>
+{ZL.Label id="输出商城下节点" NodeID="2" /}
+<li class="more"><a href="{ZL:GetNodeLinkUrl(2)/}">More +</a></li>
+</ul>
+</div>
+</div>
+<!--right_nav end-->
+	
+<div class="home_nav">
+<nav class="navbar navbar-expand-lg navbar-light iNav">
+<div class="container">
+<a class="dropMenu" href="javascript:;" onclick="ShowMobileMenu();"><i class="zi zi_list"></i><i class="zi zi_fly"></i></a>
+<a class="navbar-brand" href="/"><img src="{$LogoUrl/}" class="logo" alt="{$SiteName/}"></a><a href="/Cart/Cart.aspx?ProClass=1" class="home_cart_icon"><img src="{$CssDir/}Images/cart.png" alt="shopping cart"></a>  <a href="mailto:sales@raysandsigns.com" class="home_email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
+<a class="home_Catalogue" href="javascript:;" onclick="ShowMobileMenu();">Custom</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav mr-auto home_top_nav">
+<li class="nav-item active"><a class="nav-link active" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/plugins/third/logo/list.aspx?page=1">Custom Signs</a></li>
+<li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(2)/}">Stock Signs</a></li>
+<li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(5)/}">About</a></li>
+<!--<li class="nav-item"><a class="nav-link" href="{ZL:GetInfoUrl(8)/}">Contact Us</a></li>-->
+<li class="nav-item"><a class="nav-link" href="{ZL:GetInfoUrl(10)/}">FAQs</a></li>
+<li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(108)/}">Gallery</a></li>
+<li class="nav-item search_icon"><a href="javascript:;" onClick="isSearch();"><i class="fa fa-search text-muted"></i></a></li>
+<li class="nav-item hoem_nav_email"><a class="nav-link" href="mailto:sales@raysandsigns.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+<li class="nav-item home_nav_cart"><a class="nav-link" href="/Cart/Cart.aspx?ProClass=1"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+</ul>
+<ul class="navbar-nav home_search">
+<form class="form-inline my-2 my-lg-0" role="search" action="/Search/SearchList" target="_blank">
+<input type="hidden" name="s" value="1">
+<i class="fa fa-search text-muted"></i>
+<input type="text" class="form-control" placeholder="Keywords" name="keyword" />
+<a onClick="isClose();" class="search_close"><i class="fa fa-close"></i></a>
+</form>
+</ul>  
+</div>
+</div>
+</nav>
+</div>
+<!-- home_nav end! -->
+<div class="home_banner">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  data-interval="false">-->
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item home_banner1 active"> <a href="{ZL:GetNodeLinkUrl(3)/}"><div class="carousel-caption"><p>Design the sign with your logo or idea! </p></div></a></div>
+<div class="carousel-item home_banner2"><a href="/plugins/third/logo/list.aspx?page=1"><div class="carousel-caption"><p>Custom the sign with your own text.</p></div></a></div>
+<div class="carousel-item home_banner3"><a href="{ZL:GetNodeLinkUrl(3)/}"><div class="carousel-caption"><p>Design the sign with your logo or idea!</p></div></a></div>
+<div class="carousel-item home_banner4"><a href="/plugins/third/logo/list.aspx?page=1"><div class="carousel-caption"><p>Custom the sign with your own text.</p></div></a></div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a> 	
+
+<!--
+<div class="d-none d-sm-block banner_overflow">
+    <a class="btn btn-warning btn-lg" role="button" href="{ZL:GetNodeLinkUrl(3)/}"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Design the sign with your logo or idea!</a>
+	<a class="btn btn-secondary btn-lg" role="button" href="/plugins/third/logo/list.aspx?page=1"><i class="fa fa-puzzle-piece"></i> Custom the sign with your own text.</a>
+</div>	
+-->
+</div>
+</div>
+<!-- home_banner end! -->
+
+<dl class="d-block d-sm-none banner_overflow-t">
+	<dd><a class="btn btn-secondary" role="button" href="{ZL:GetNodeLinkUrl(3)/}"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Design the sign with your logo or idea!</a></dd>
+	<dd><a class="btn btn-secondary" role="button" href="/plugins/third/logo/list.aspx?page=1"><i class="fa fa-puzzle-piece"></i> Custom the sign with your own text.</a></dd>
+</dl>
+
+<div class="home_news">
+<div class="container" id="dvmq">
+<ul>
+{ZL.Label id="输出指定节点标题_无时间属性" NodeID="114" TitleNum="120" ShowNum="10" /}
+</ul>
+
+</div>
+
+</div>
+
+<section class="home_wrap1">
+<div class="container">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+{ZL.Label id="输出指定节点商品列表_热卖" NodeID="2" ShowNum="10" /}
+</div>
+<!-- Add Arrows -->
+<div class="swiper-button-next"><i class="carousel-control-next-icon" aria-hidden="true"></i></div>
+<div class="swiper-button-prev"><i class="carousel-control-prev-icon" aria-hidden="true"></i></div>
+</div>
+</div>
+</section>
+<!-- home_wrap1 end! -->
+	
+<section class="homeSpc">
+<div class="container spcList">
+<h2><a href="/Special_1/Default.aspx">Sign by category <i class="zi zi_pathRight"></i></a></h2>
+<ul class="row">
+{ZL.Label id="父ID下专题列表" Pid="1" Order="asc" ShowNum="19" ClassName="col-12 col-md-3" /}
+<li class="col-12 col-md-3"><a href="/Special_1/Default.aspx">More+</a></li>
+</ul>
+</div>
+</section>
+<!--homeSpc end-->
+
+<section class="sec02">
+<div class="container neon_signs">
+	<div class="Neon_signs_t"><i class="title">LED STRIP SIGNS</i></div>
+	<ul class="row">
+	{ZL.Label id="输出指定节点商品_新样式不分页" NodeID="106" ShowNum="4" /}
+	</ul>
+	<div class="btn"><a href="{ZL:GetNodeLinkUrl(106)/}" class="gd_btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+</div>
+ </section>
+<!--LED STRIP SIGNS end! --> 
+
+<section class="sec01">
+<div class="container neon_signs">
+	<div class="Neon_signs_t"><i class="title">LED SIGNS</i></div>
+	<ul class="row">
+		{ZL.Label id="输出指定节点商品_新样式不分页" NodeID="105" ShowNum="4" /}
+	</ul>
+	<div class="btn"><a href="{ZL:GetNodeLinkUrl(105)/}" class="gd_btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+</div>
+</section>
+<!--Neon_signs end! -->
+<section class="sec02">
+<div class="container neon_signs">
+	<div class="Neon_signs_t"><i class="title">NEON SIGNS</i></div>
+	<ul class="row">
+   {ZL.Label id="输出指定节点商品_新样式不分页" NodeID="104" ShowNum="4" /}
+	</ul>
+	<div class="btn"><a href="{ZL:GetNodeLinkUrl(104)/}" class="gd_btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+</div>
+</section>
+<!--Neon_signs end! -->
+<section class="sec02">
+<div class="container neon_signs">
+	<div class="Neon_signs_t"><i class="title">OTHERS</i></div>
+	<ul class="row">
+	{ZL.Label id="输出指定节点商品_新样式不分页" NodeID="113" ShowNum="4" /}
+
+
+	</ul>
+	<div class="btn"><a href="{ZL:GetNodeLinkUrl(113)/}" class="gd_btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+</div>
+ </section>
+<!--OTHERS end! --> 
+
+		
+<div class="foot_video">
+<video style="width: 100%;" preload="auto" autoplay="" loop="" muted="">
+<source src="{$CssDir/}mp4/home.mp4">
+</video>
+	<div class="container-fluid">
+		<div class="container">
+<div class="">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item"> <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Customize </a> </li>
+      <li class="nav-item"> <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Search</a> </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <a class="btn btn-light" href="{ZL:GetNodeLinkUrl(3)/}"><i class="fa fa-pencil"></i> Need to customize your sign? Please send us your request.</a>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        
+<div class="wapper">
+      <form class="form-inline my-2 my-lg-0" role="search" action="/Search/SearchList">
+	  <input type="hidden" name="s" value="1">
+				<input type="text"  name="keyword" placeholder="Search our products."/>
+				<div class="btn"><i class="fa fa-search" aria-hidden="true"></i></div>
+       </form>
+				<dl>
+					<dt>Hot:&nbsp;&nbsp;</dt>
+					<dd><a href="/Search/SearchList?s=1&keyword=sign">Sign</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=led">led</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=neon">Neon</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Stamp">Stamp</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Party">Party</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=mickey">Mickey</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=orange">Orange sign</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=hair">Hair cut</a></dd>
+				</dl>
+			</div>
+			
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>	
+
+<div class="sec04">
+  <div class="container">
+		<ul class="row">
+			<li class="col-xl col-lg col-md-6 col-sm-6 col-6">
+				<dl>
+					<dt>ABOUT</dt>
+<!--					<dd><a href="{ZL:GetNodeLinkUrl(5)/}">Company</a></dd>-->
+<!--					<dd><a href="{ZL:GetInfoUrl(7)/}">Teams</a></dd>-->
+					<dd><a href="{ZL:GetInfoUrl(23)/}">Company</a></dd>
+					<dd><a href="{ZL:GetInfoUrl(22)/}">Why buy from us</a></dd>
+					<dd><a href="{ZL:GetInfoUrl(4)/}">Privacy Policy</a></dd>
+					<dd><a href="{ZL:GetInfoUrl(5)/}">Warranty & Shipping Policies</a></dd>					
+<!--					<dd><a href="{ZL:GetInfoUrl(6)/}">Return & Refund policy</a></dd>-->
+					<dd><a href="{ZL:GetInfoUrl(8)/}">Contact</a></dd>
+					<dd><a href="{ZL:GetInfoUrl(18)/}" class="text-danger">$$ TAX SEASON special! 5% off all tax signs!</a></dd>
+				</dl>
+			</li>
+				<li class="col-xl col-lg col-md-6 col-sm-6 col-6">
+				<dl>
+					<dt>Custom Signs</dt>
+					<dd><a href="{ZL:GetNodeLinkUrl(7)/}">Custom Neon Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(8)/}">Custom LED Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(9)/}">Custom Your LOGO Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(10)/}">Custom NEON Signs Request Form</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(11)/}">Custom LED Signs Request Form</a></dd>
+					<dt>SIGN BY TYPE</dt>
+					<dd><a href="{ZL:GetNodeLinkUrl(105)/}">LED Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(106)/}">LED Strip Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(113)/}">Others</a></dd>
+				</dl>
+			</li>
+				<li class="col-xl col-lg col-md-6 col-sm-6 col-6">
+				<dl>
+					<dt>Sign By Category</dt>
+					<dd><a href="{ZL:GetNodeLinkUrl(60)/}">Neon Bar Signs</a></dd>
+					<dd><a href="{ZL:GetNodeLinkUrl(61)/}">Pizza & Pizza Slice</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Coffee">Coffee & Cafe</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=ice">Ice Cream & Yogurt</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Restaurant">Restaurant Signs</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Massage">Massage Therapy</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Facial">Facial & Waxing</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Tattoo">Tattoo & Piercing</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Hair">Hair & Barber Shops</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Beauty">Beauty Salon Signs</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=atm">ATM Signs</a></dd>
+				</dl>
+			</li>
+				<li class="col-xl col-lg col-md-6 col-sm-6 col-6">
+				<dl>
+					<dt></dt>
+					<dd><a href="/Search/SearchList?s=1&keyword=Tax">Tax Service Signs</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Loans">Loans & Mortgage Signs</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Medical">Medical & Dentist</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Automotive">Automotive Signs</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Tailor">Tailor & Alteration</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Cleaners">Cleaners & Laundry</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Animals">Animals & Pets</a></dd>
+					<dd><a href="/Search/SearchList?s=1&keyword=Restroom">Restroom Signs</a></dd>
+				</dl>
+			</li>
+			<li class="col-xl col-lg col-md-12 col-sm-12 col-12 youxiang_box">
+				<div class="youxiang"><a href="mailto:sales@raysandsigns.com"><table><tbody><tr><td rowspan="2"><i class="fa fa-envelope max" aria-hidden="true"></i></td><td>Subscirbe to our</td></tr><tr><td>NEWSLETTER <i class="fa fa-angle-double-right" aria-hidden="true"></i></td></tr></tbody></table></a></div>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="copy">
+	  		<ul>
+	  		<li>{$Copyright/}</li>
+				<li><a href="#"><img src="{$CssDir/}images/index_icon5.png" alt="paypal" /></a><a href="#"><img src="{$CssDir/}images/index_icon.png" alt=""></a><a href="#"><img src="{$CssDir/}images/index_icon2.png" alt=""></a><a href="#"><img src="{$CssDir/}images/index_icon3.png" alt=""></a><a href="#"><img src="{$CssDir/}images/index_icon4.jpg" alt=""></a></li>
+	  		</ul>
+	  </div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Welcome Tays&SIGNS!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        We provide professional LED and signage sales and services.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>	
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","10%");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","10%");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+var Tnum = '';
+if(document.body.clientWidth > 800){
+ Tnum = 4;
+}else{
+  Tnum =2;
+}
+
+var swiper = new Swiper('.swiper-container', {
+autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+//	autoplay:true,
+  	slidesPerView: Tnum,
+  
+//  spaceBetween: 40,
+  	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+  	},
+	navigation: {
+	nextEl: '.swiper-button-next',
+	prevEl: '.swiper-button-prev',
+  }
+});
+	
+$(function(){
+//自动加载模态框
+//$('#myModal').modal({});
+})
+
+//右侧导航
+function ShowMobileMenu(){
+	$(".home17_mobilemenu_bg").fadeIn();;
+	$(".home17_mobilemenu").addClass("active");
+	$(".home17_mobilemenu_bg").click(function(){
+		$(".home17_mobilemenu_bg").fadeOut();
+		$(".home17_mobilemenu").removeClass("active");
+	});
+}
+function HideMobileMenu(){
+	$(".home17_mobilemenu_bg").fadeOut();
+	$(".home17_mobilemenu").removeClass("active");
+}
+
+
+function scroll_news()//滚动updata
+{
+	$(function () {
+		$('#dvmq li').eq(0).fadeOut('slow', function () {
+			$(this).clone().appendTo($(this).parent()).fadeIn('slow');
+			$(this).remove();
+		});
+	});
+}
+setInterval('scroll_news()',3000);
+function HideNews(){
+	$(".home17_official_c").slideToggle();
+	console.log($(".home17_official").hasClass("active"))
+	if($(".home17_official").hasClass("active")){
+		$(".home17_official").removeClass("active");		
+	}
+	else{
+		$(".home17_official").addClass("active");
+	}
+}
+</script>
+</body>
+</html>

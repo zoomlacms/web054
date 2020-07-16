@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>335</LabelID>
+    <LabelName>简单文章列表_分页</LabelName>
+    <LabelType>4</LabelType>
+    <LabelCate>LED专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,1,1,节点ID|ShowNum,20,1,显示数</LabelParam>
+    <LabelTable>ZL_CommonModel LEFT JOIN ZL_C_Article ON ZL_CommonModel.ItemID=ZL_C_Article.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.Title,CreateTime</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) and Status=99</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+
+&lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;{Field="Title"/}&lt;/a&gt;&lt;span hidden&gt;{ZL:FormatDate({Field="CreateTime"/},yyyy-MM-dd)/}&lt;/span&gt;&lt;/li&gt;
+
+
+{/Repeate}
+
+{ZL.Page id="自定义分页"/}
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_CommonModel","tb_s":"ZL_C_Article"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

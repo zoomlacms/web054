@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>334</LabelID>
+    <LabelName>自定义分页</LabelName>
+    <LabelType>5</LabelType>
+    <LabelCate>列表分页导航</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;table id="pageDiv" totalpage="1" style="width:100%;border:none; margin-top:15px;" width="100%" align="center"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign="bottom" align="center" nowrap="wrap" &gt;A total of&lt;b&gt; {totalrecord/} &lt;/b&gt; records&amp;nbsp;&amp;nbsp;Current :&lt;strong&gt;&lt;font color="red"&gt; {currentpage/} &lt;/font&gt;&lt;/strong&gt;/All&lt;strong&gt;  {totalpage/} &lt;/strong&gt; page&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;span class="paging"&gt;&lt;a href="{firsturl/}"&gt;Home&lt;/a&gt; &amp;nbsp;&lt;a href="{prvurl/}"&gt; Previous&lt;/a&gt;&amp;nbsp;&lt;a href="{nexturl/}"&gt; Next&lt;/a&gt;&amp;nbsp;  &lt;a href="{endurl/}"&gt; End&lt;/a&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</LabelContent>
+    <LabelCount>0</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo />
+    <addroot />
+    <setroot />
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+  </Table>
+</NewDataSet>
